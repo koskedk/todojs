@@ -46,20 +46,8 @@
     ]
   },
   "jest": {
-    "collectCoverage": true,
-    "coverageDirectory": "./coverage",
     "transformIgnorePatterns": [
       "/node_modules/(?!nanoid)"
-    ],
-    "reporters": [
-      "default",
-      [
-        "jest-junit",
-        {
-          "outputDirectory": "./reports",
-          "outputName": "jest-results.xml"
-        }
-      ]
     ]
   }
 }

@@ -6,7 +6,7 @@ name: CI
 on:
   push:
     branches: [ "main" ]
-  pull_request:
+  pull_request_target:
     branches: [ "main" ]
 
 jobs:
@@ -29,7 +29,7 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-    
+
     - name: Jest coverage report
       uses: ArtiomTr/jest-coverage-report-action@v2.3.1
     

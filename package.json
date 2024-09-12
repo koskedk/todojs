@@ -46,6 +46,8 @@
     ]
   },
   "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "./coverage",
     "transformIgnorePatterns": [
       "/node_modules/(?!nanoid)"
     ],

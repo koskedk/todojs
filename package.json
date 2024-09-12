@@ -17,10 +17,14 @@
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  },
   "scripts": {
+    "prestart": "node aspnetcore-https && node aspnetcore-react",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -41,9 +45,11 @@
       "last 1 safari version"
     ]
   },
-  "jest":{
-    "transformIgnorePatterns": [
-      "/node_modules/(?!nanoid)"
+  "jest": {
+    "transformIgnorePatterns": ["/node_modules/(?!nanoid)"],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts"
     ]
   }
 }

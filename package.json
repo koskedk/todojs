@@ -24,7 +24,7 @@
     "prestart": "node aspnetcore-https && node aspnetcore-react",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -46,8 +46,10 @@
     ]
   },
   "jest": {
-    "transformIgnorePatterns": [
-      "/node_modules/(?!nanoid)"
+    "transformIgnorePatterns": ["/node_modules/(?!nanoid)"],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts"
     ]
   }
 }

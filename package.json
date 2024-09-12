@@ -45,9 +45,19 @@
       "last 1 safari version"
     ]
   },
-  "jest":{
+  "jest": {
     "transformIgnorePatterns": [
       "/node_modules/(?!nanoid)"
+    ],
+    "reporters": [
+      "default",
+      [
+        "jest-junit",
+        {
+          "outputDirectory": "./reports",
+          "outputName": "jest-results.xml"
+        }
+      ]
     ]
   }
 }

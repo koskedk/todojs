@@ -1,11 +1,14 @@
 import React from 'react';
-import Tasks from './Tasks';
+import Tasks from './features/tasks/Tasks';
+import Counter from './features/counter/Counter';
 
 function App() {
   return (
     <div>
          <h1>Welcome to toDoJs !</h1>
-         <Tasks/>
+      <Counter />
+      <hr />
+      <Tasks/>
     </div>
   );
 }
